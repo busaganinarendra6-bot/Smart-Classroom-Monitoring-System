@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+
+<meta charset="UTF-8">
+
+<title>Register</title>
+
+<style>
+
+body{
+background:#2563eb;
+display:flex;
+justify-content:center;
+align-items:center;
+height:100vh;
+font-family:Arial;
+}
+
+.box{
+
+background:white;
+padding:30px;
+width:380px;
+border-radius:15px;
+box-shadow:0 5px 20px rgba(0,0,0,.3);
+
+}
+
+input{
+
+width:100%;
+padding:12px;
+margin:10px 0;
+
+}
+
+button{
+
+width:100%;
+padding:12px;
+background:#2563eb;
+color:white;
+border:none;
+cursor:pointer;
+
+}
+
+a{
+
+display:block;
+text-align:center;
+margin-top:15px;
+
+}
+
+</style>
+
+</head>
+
+<body>
+
+<div class="box">
+
+<h2 align="center">Student Registration</h2>
+
+<input id="username" placeholder="Username">
+
+<input id="password" type="password" placeholder="Password">
+
+<input id="confirm" type="password" placeholder="Confirm Password">
+
+<button onclick="register()">Register</button>
+
+<a href="/login">Already have an account? Login</a>
+
+</div>
+
+<script>
+
+function register(){
+
+let u=document.getElementById("username").value;
+
+let p=document.getElementById("password").value;
+
+let c=document.getElementById("confirm").value;
+
+if(u=="" || p==""){
+
+alert("Fill all fields");
+
+return;
+
+}
+
+if(p!=c){
+
+alert("Passwords do not match");
+
+return;
+
+}
+
+localStorage.setItem("username",u);
+
+localStorage.setItem("password",p);
+
+alert("Registration Successful");
+
+window.location="/login";
+
+}
+
+</script>
+
+</body>
+
+</html>

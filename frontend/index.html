@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Smart Classroom Monitoring System</title>
+
+    <link rel="stylesheet" href="/frontend/style.css">
+</head>
+
+<body>
+
+<div class="container">
+
+    <h1>🎓 Smart Classroom Monitoring System</h1>
+
+    <!-- Dashboard Cards -->
+    <div class="dashboard">
+
+        <!-- Students -->
+        <div class="small-card">
+            <h3>👨 Students</h3>
+            <h1 id="count">0</h1>
+        </div>
+
+        <!-- Attendance -->
+        <div class="small-card">
+            <h3>📊 Attendance</h3>
+            <h1 id="attendance">0%</h1>
+        </div>
+
+        <!-- Empty Seats -->
+        <div class="small-card">
+            <h3>🪑 Empty Seats</h3>
+            <h1 id="empty">0</h1>
+        </div>
+
+        <!-- Camera Status -->
+        <div class="small-card">
+            <h3>📷 Camera Status</h3>
+            <h2 class="status">ACTIVE</h2>
+        </div>
+
+        <!-- Classroom Status -->
+        <div class="small-card">
+            <h3>🚨 Classroom Status</h3>
+            <h2 id="status">Loading...</h2>
+        </div>
+
+    </div>
+
+    <!-- AI Model -->
+    <div class="card">
+        <h2>🤖 AI Model</h2>
+        <h3>YOLOv8 Nano</h3>
+    </div>
+
+    <!-- Date & Time -->
+    <div class="card">
+        <h2>📅 Date & Time</h2>
+        <h3 id="datetime"></h3>
+    </div>
+
+    <!-- Live Camera -->
+    <div class="card">
+        <h2>📷 Live Classroom Camera</h2>
+
+        <img
+            src="http://127.0.0.1:8000/video"
+            alt="Live Camera Feed"
+            style="width:700px; max-width:100%; border:4px solid red; border-radius:10px;"
+        >
+    </div>
+
+</div>
+
+<script src="/frontend/script.js"></script>
+
+</body>
+
+</html>
